@@ -1,6 +1,7 @@
 {
-  "name": "angulario-starter",
+  "name": "odpeknvxnlq.angular",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,19 +10,21 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "~9.1.2",
-    "@angular/common": "~9.1.2",
-    "@angular/compiler": "~9.1.2",
+    "rxjs": "6.5.5",
+    "tslib": "1.11.1",
+    "zone.js": "0.10.3",
     "@angular/core": "~9.1.2",
     "@angular/forms": "~9.1.2",
+    "@angular/common": "~9.1.2",
+    "@angular/router": "~9.1.2",
+    "@angular/compiler": "~9.1.2",
+    "@angular/animations": "~9.1.2",
     "@angular/platform-browser": "~9.1.2",
     "@angular/platform-browser-dynamic": "~9.1.2",
-    "@angular/router": "~9.1.2",
-    "rxjs": "~6.5.4",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "jasmine-core": "3.5.0",
+    "jasmine-marbles": "0.6.0",
+    "angular-in-memory-web-api": "0.9.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.2",
