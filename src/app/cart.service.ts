@@ -1,15 +1,17 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { ShippingCost } from './shared/models/shipping-costs.interface';
+import { Product } from './shared/models/products.interface';
 
 @Injectable({
   providedIn: "root"
 })
 export class CartService {
-  items = [];
+  items:Product[] = [];
 
   constructor(private http: HttpClient) {}
 
-  addToCart(product) {
+  addToCart(product: Product) {
     this.items.push(product);
   }
 
@@ -23,6 +25,6 @@ export class CartService {
   }
 
   getShippingPrices() {
-    return this.http.get("/assets/shipping.json");
+    return this.http.get<ShippingCost>("/assets/shipping.json");
   }
 }

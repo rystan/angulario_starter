@@ -3,6 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 
 import { products } from "../products";
 import { CartService } from "../cart.service";
+import { Product } from '../shared/models/products.interface';
 
 @Component({
   selector: "app-product-details",
@@ -10,9 +11,9 @@ import { CartService } from "../cart.service";
   styleUrls: ["./product-details.component.css"]
 })
 export class ProductDetailsComponent implements OnInit {
-  product;
+  product: Product;
 
-  addToCart(product) {
+  addToCart(product: Product) {
     this.cartService.addToCart(product);
     window.alert('Your product has been added to the shopping cart.')
   }
