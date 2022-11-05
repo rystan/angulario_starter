@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { CartService } from '../cart.service';
 import { Product } from '../shared/models/products.interface';
 import { Customer } from '../shared/models/customer.interface';
@@ -11,11 +11,11 @@ import { Customer } from '../shared/models/customer.interface';
 })
 export class CartComponent implements OnInit {
   items: Product[];
-  checkoutForm: FormGroup;
+  checkoutForm: UntypedFormGroup;
 
   constructor(
     private cartService: CartService,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
   ) {
     this.checkoutForm = this.formBuilder.group({
       name: '',
@@ -27,7 +27,7 @@ export class CartComponent implements OnInit {
     return this.checkoutForm.value as Customer;
   }
 
-  private createForm(model: Customer): FormGroup {
+  private createForm(model: Customer): UntypedFormGroup {
     return this.formBuilder.group(model);
   }
   private updateForm(model: Partial<Customer>): void {

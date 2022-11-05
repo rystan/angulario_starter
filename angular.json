@@ -117,9 +117,10 @@
       }
     }
   },
-  "defaultProject": "angular.io-example",
   "cli": {
     "analytics": "6501d4ef-f749-4348-bb92-138cb721b920",
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
